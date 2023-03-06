@@ -1,0 +1,256 @@
+extends @layouts/Default/Default.layout.pug
+
+block append scripts
+	script(src=require('./Index.page.js'), defer)
+
+block header
+	header.c-header
+		.c-header__wrapper
+			a.c-header__logo(href="#")
+				img(src=require('@assets/img/logo.svg'), alt="alt")
+			
+			select.c-header__selectbox
+				option(selected, disabled, hidden) Select court
+				option(value="0") 0
+				option(value="1") 1
+				option(value="2") 2
+			
+			.c-header__auth
+				img(src=require('@assets/img/avatar.png'), alt="alt")
+
+block body
+	section
+		.container
+			.grid
+				.grid__column
+					section.s-waiting-list
+						.s-waiting-list__header
+							h3 Waiting List
+							button
+								img(src=require('@assets/img/question-mark.svg'), alt="alt")
+							.flex-grow
+							button
+								img(src=require('@assets/img/refresh.svg'), alt="alt")
+						
+						.s-waiting-list__table
+							button.s-waiting-list__table__readmore
+								span Show other info
+								img(src=require('@assets/img/arrow-down.svg'), alt="alt")
+							
+							table
+								thead
+									tr
+										th.text-center.hidden-xs(width="60") Game Type
+										th.text-center.hidden-xs(width="60") Game Rating
+										th Players
+										th
+										th.text-center Waiting Time
+								tbody
+									tr
+										td.text-center.hidden-xs
+											img(src=require('@assets/img/racket.svg'), alt="alt")
+										td.text-center.hidden-xs
+											strong 3.5
+										td
+											span Lynn Tanner
+											span Roderick Flich
+										td
+											span Sledge Hammer
+											span Willie Tanner
+										td.time.text-center
+											strong 19
+											|  mins
+											button
+												img(src=require('@assets/img/trash.svg'), alt="alt")
+									tr
+										td.text-center.hidden-xs
+											img(src=require('@assets/img/racket.svg'), alt="alt")
+										td.text-center.hidden-xs
+											strong 3.5
+										td
+											span Angus MacGyver
+											span Hannibal Smith
+										td
+											span Michael Knight
+											span Fred Decker
+										td.time.text-center
+											strong 19
+											|  mins
+											button
+												img(src=require('@assets/img/trash.svg'), alt="alt")
+									tr
+										td.text-center.hidden-xs
+											img(src=require('@assets/img/racket.svg'), alt="alt")
+										td.text-center.hidden-xs
+											img(src=require('@assets/img/handshake.svg'), alt="alt")
+										td
+											span Thomas Magnum
+											span Roderick Decker
+										td
+											span Tony Danza
+											span Your Name
+										td.time.text-center
+											strong 21
+											|  mins
+											button
+												img(src=require('@assets/img/trash.svg'), alt="alt")
+									tr
+										td.text-center.hidden-xs
+											img(src=require('@assets/img/racket.svg'), alt="alt")
+										td.text-center.hidden-xs
+											strong 3.5
+										td
+											span Cristian Tanner
+											span B.A. Baracus
+										td
+											span Capt. Trunk
+											span Dori Doreau
+										td.time.text-center
+											strong 26
+											|  mins
+											button
+												img(src=require('@assets/img/trash.svg'), alt="alt")
+
+
+
+
+				.grid__column
+					section.s-announcemenets
+						h3 Announcements
+						img(src=require('@assets/img/compass.png'), alt="alt")
+						.s-announcemenets__wrapper
+							h4 Court opening hours will change!
+							.s-announcemenets__header
+								span 11.Dec.22
+								div
+								span 11:20 pm
+							.s-announcemenets__content
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit malesuada purus, in rhoncus risus bibendum eu. Proin tincidunt ut quam in varius. Phasellus lorem ligula, porta ac risus at, volutpat fringilla felis. Integer lectus justo, porttitor eu nulla a, egestas blandit metus.
+
+					section.s-courts
+						img(src=require('@assets/img/compass.png'), alt="alt")
+						.s-courts__wrapper
+							h3.hidden-xs Courts
+							.courts-grid
+								.courts-grid__column
+									.c-court
+										.c-court__map
+											.c-court__map__start
+											.c-court__map__middle
+											.c-court__map__end
+										.c-court__content
+											div
+												span Roderick D.
+												span Devon M.
+											div
+												strong 12 min.
+											div
+												span Rick W.
+												span Dori D.
+								.courts-grid__column
+									.c-court
+										.c-court__map
+											.c-court__map__start
+											.c-court__map__middle
+											.c-court__map__end
+										.c-court__content
+											div
+												span Roderick D.
+												span Devon M.
+											div
+												strong 12 min.
+											div
+												span Rick W.
+												span Dori D.
+								.courts-grid__column
+									.c-court
+										.c-court__map
+											.c-court__map__start
+											.c-court__map__middle
+											.c-court__map__end
+										.c-court__content
+											div
+												span Roderick D.
+												span Devon M.
+											div
+												strong 12 min.
+											div
+												span Rick W.
+												span Dori D.
+								.courts-grid__column
+									.c-court
+										.c-court__map
+											.c-court__map__start
+											.c-court__map__middle
+											.c-court__map__end
+										.c-court__content
+											div
+												span Roderick D.
+												span Devon M.
+											div
+												strong 12 min.
+											div
+												span Rick W.
+												span Dori D.
+								.courts-grid__column
+									.c-court
+										.c-court__map
+											.c-court__map__start
+											.c-court__map__middle
+											.c-court__map__end
+										.c-court__content
+											div
+												span Roderick D.
+												span Devon M.
+											div
+												strong 12 min.
+											div
+												span Rick W.
+												span Dori D.
+								.courts-grid__column
+									.c-court
+										.c-court__map
+											.c-court__map__start
+											.c-court__map__middle
+											.c-court__map__end
+										.c-court__content
+											div
+												span Roderick D.
+												span Devon M.
+											div
+												strong 12 min.
+											div
+												span Rick W.
+												span Dori D.
+								.courts-grid__column
+									.c-court.c-court--deactivated
+										.c-court__map
+											.c-court__map__start
+											.c-court__map__middle
+											.c-court__map__end
+										.c-court__content
+											div
+												span Roderick D.
+												span Devon M.
+											div
+												strong 12 min.
+											div
+												span Rick W.
+												span Dori D.
+								.courts-grid__column
+									.c-court.c-court--deactivated
+										.c-court__map
+											.c-court__map__start
+											.c-court__map__middle
+											.c-court__map__end
+										.c-court__content
+											div
+												span Roderick D.
+												span Devon M.
+											div
+												strong 12 min.
+											div
+												span Rick W.
+												span Dori D.
+						button.xs Add me
+						button.lg Add to the waiting list
